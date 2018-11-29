@@ -42,7 +42,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #
 #          -- Write the names of two types of graphics objects that
 #             you can construct OTHER than Circle and Point:
-#                rg.Rectangle   rg.RoseWindow
+#                rg.Rectangle   rg.Mouse
 #
 #          -- Write the names of three METHODs that Circle objects have:
 #                attach_to, clone, and deatach_from
