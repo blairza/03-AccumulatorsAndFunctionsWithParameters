@@ -79,7 +79,7 @@ def circle_and_rectangle():
            150.0
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # DONE: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -87,6 +87,29 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
+    window = rg.RoseWindow()
+    point1 = rg.Point(100, 150)
+    point2 = rg.Point(120, 175)
+    point3 = rg.Point(220,250)
+    circle = rg.Circle(point1, 25)
+    circle.fill_color = 'blue'
+    circle.attach_to(window)
+    rectangle = rg.Rectangle(point2,point3)
+    rectangle.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print('Point',circle.center)
+    print(point1.x)
+    print(point1.y)
+    print()
+    print(rectangle.outline_thickness)
+    print(rectangle.fill_color)
+    print(rectangle.corner_1)
+    print(point2.x)
+    print(point2.y)
+
 
 
 def lines():
@@ -111,7 +134,23 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
+    window = rg.RoseWindow()
+    point1 = rg.Point(100,100)
+    point2 = rg.Point(200,100)
+    point3 = rg.Point(100,120)
+    point4 = rg.Point(90,170)
+    line1 = rg.Line(point1,point2)
+    line1.attach_to(window)
+    line2 = rg.Line(point3,point4)
+    line2.attach_to(window)
+    line2.thickness = 20
+    mid = line2.get_midpoint()
+    print('Point', mid)
+    print(mid.x)
+    print(mid.y)
+    window.render()
+    window.close_on_mouse_click()
 
 
 # -----------------------------------------------------------------------------
